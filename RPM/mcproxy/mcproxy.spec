@@ -4,8 +4,8 @@ Release: 1%{?dist}
 Summary: Multicast Proxy for IGMP/MLD
 
 License: GPL-2.0 License
-URL: https://github.com/mcproxy/mcproxy
-Source0: https://github.com/mcproxy/mcproxy/archive/refs/tags/v1.1.1.tar.gz
+URL: https://github.com/%{name}/%{name}
+Source0: https://github.com/%{name}/%{name}/archive/refs/tags/v%{version}.tar.gz
 
 BuildRequires: qt-devel
 #Requires:
@@ -29,7 +29,7 @@ ExecStart=/usr/bin/mcproxy -f /etc/mcproxy/mcproxy.conf
 [Install]
 WantedBy=multi-user.target
 EOF
-cd mcproxy/
+cd $RPM_BUILD_ROOT/mcproxy/
 qmake-qt4
 make
 
