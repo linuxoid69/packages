@@ -29,7 +29,8 @@ ExecStart=/usr/bin/mcproxy -f /etc/mcproxy/mcproxy.conf
 [Install]
 WantedBy=multi-user.target
 EOF
-cd $RPM_BUILD_ROOT/mcproxy/
+ls -l 
+cd mcproxy/
 qmake-qt4
 make
 
