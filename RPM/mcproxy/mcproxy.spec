@@ -7,7 +7,7 @@ License: GPL-2.0 License
 URL: https://github.com/%{name}/%{name}
 Source0: https://github.com/%{name}/%{name}/archive/refs/tags/v%{version}.tar.gz
 
-BuildRequires: qt-devel
+BuildRequires: (qt5-qtbase-devel or qt-devel)
 #Requires:
 
 %description
@@ -31,7 +31,7 @@ WantedBy=multi-user.target
 EOF
 ls -l 
 cd mcproxy/
-qmake-qt4
+qmake-qt4 || qmake-qt5
 make
 
 %install
