@@ -13,6 +13,8 @@ BuildRequires: (qt5-qtbase-devel or qt-devel)
 %description
 Multicast Proxy for IGMP/MLD
 
+%global debug_package %{nil}
+
 %prep
 %setup -q
 
